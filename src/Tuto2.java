@@ -11,7 +11,7 @@ public class Tuto2 {
 		shop1.CustomerCount = 30;
 		shop1.StaffCount = 12;
 		
-		ArrayList<Coffee> coffeeList = new ArrayList<>();
+		ArrayList<Coffee> coffeeList = new ArrayList<Coffee>();
 		Coffee maker1 = new Coffee();
 		maker1.CoffeeName = "Espresso";
 		maker1.IsFill = true;
@@ -27,7 +27,6 @@ public class Tuto2 {
 		shop1.CoffeeTypes.addAll(coffeeList);
 		
 		Hero hero = new Hero("Batman",34,"fighting skill");
-		String info = hero.toString();
-		System.out.println(info);
+		System.out.println(hero);
 	}
 	}
