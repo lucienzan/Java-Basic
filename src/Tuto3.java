@@ -1,6 +1,4 @@
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.SequenceInputStream;
+import java.io.CharArrayReader;
 
 public class Tuto3 {
     public static void main(String[] args) throws Exception
@@ -41,18 +39,48 @@ public class Tuto3 {
         //fr.close();
         //fos.close();
 
-        FileInputStream fr = new FileInputStream("/Users/mac/Documents/java/Java Basic/file/source.txt");
-        FileInputStream fr1 = new FileInputStream("/Users/mac/Documents/java/Java Basic/file/task.txt");
+        // SequenceInputStream
+        //        FileInputStream fr = new FileInputStream("/Users/mac/Documents/java/Java Basic/file/source.txt");
+        //        FileInputStream fr1 = new FileInputStream("/Users/mac/Documents/java/Java Basic/file/task.txt");
+        //
+        //        FileOutputStream fos = new FileOutputStream("/Users/mac/Documents/java/Java Basic/file/source1.txt");
+        //        int x;
+        //        SequenceInputStream sis = new SequenceInputStream(fr, fr1);
+        //        while ((x = sis.read()) != -1) {
+        //            fos.write(x);
+        //        }
+        //        fr.close();
+        //        fr1.close();
+        //        fos.close();
+        //        sis.close();
 
-        FileOutputStream fos = new FileOutputStream("/Users/mac/Documents/java/Java Basic/file/source1.txt");
-        int x;
-        SequenceInputStream sis = new SequenceInputStream(fr, fr1);
-        while ((x = sis.read()) != -1) {
-            fos.write(x);
+        // ByteArrayInputStream & ByteArrayOutputStream
+        //byte b[] = { 'a', 'b', 'c', 'd', 'e' };
+        //ByteArrayInputStream bais = new ByteArrayInputStream(b);
+        //int x;
+        //while ((x = bais.read()) != 1) {
+        //    System.out.print((char) x);
+        //}
+        // or
+        //String s = new String(bais.readAllBytes());
+        //System.out.print(s);
+
+        //ByteArrayOutputStream baos = new ByteArrayOutputStream(20);
+        //baos.write(b);
+        //byte b1[] = baos.toByteArray();
+        //for (byte bb : b1) {
+        //    System.out.print((char) bb);
+        //}
+        //baos.writeTo(new FileOutputStream("your path/task.txt"));
+        //baos.close();
+        //bais.close();
+
+        // charArray
+        CharArrayReader car = new CharArrayReader(new char[] { 'v', 'b', 'd' });
+        int t;
+        while ((t = car.read()) != -1) {
+            System.out.print((char) t);
         }
-        fr.close();
-        fr1.close();
-        fos.close();
-        sis.close();
+        car.close();
     }
 }
