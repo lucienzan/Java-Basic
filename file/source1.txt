@@ -1,0 +1,4 @@
+tThHiIsS iIsS tTeEsStTiInNgG fFoOrR cCoOpPyY fFiIlLeE tToO oOtThHeErR sSoOuUrRcCeE
+hHeElLlLoO wWoOrRlLdD
+tThHiIsS iIsS mMeE mMaArRiIoO!
+how are you?this is java file output stream testing
